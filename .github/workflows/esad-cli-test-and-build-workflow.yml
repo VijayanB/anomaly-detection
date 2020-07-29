@@ -62,6 +62,5 @@ jobs:
         env:
           GOPROXY: "https://proxy.golang.org"
         run: |
-          cd cli
           go test ./...  -coverprofile=coverage.out
           go tool cover -func=coverage.out
