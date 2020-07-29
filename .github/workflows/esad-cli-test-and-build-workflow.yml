@@ -56,10 +56,12 @@ jobs:
         uses: golangci/golangci-lint-action@v1
         with:
           version: v1.28
+          working-directory: cli
 
       - name: Run coverage
         env:
           GOPROXY: "https://proxy.golang.org"
         run: |
+          cd cli
           go test ./...  -coverprofile=coverage.out
           go tool cover -func=coverage.out
