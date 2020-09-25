@@ -5,7 +5,6 @@ coverage:
         threshold: 5
         target: auto
       plugin:
-        target: 70%
         paths:
           - "!cli/"
         flags:
